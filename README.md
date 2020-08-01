@@ -28,10 +28,13 @@ Low-complexity challenges do not reveal anything.
 - Not counting missing features, 100% code coverage, maintainable tests
 - Questionable:
     - Used a sledgehammer to crack a nut
+    - Output printer should use object builder (probably a refactor would have triggered it around GET /productions)
     - Domain entity factory could be extracted
     - Massive test count due to presenting the approach and issues
     - Typesafe validation needed more tests (and still needs a few tbh)
     - Request body transformation could be moved to action (arguably)
+    - No dedicated repository. It is difficult to clean the storage (update and already existing entity error would force creating it)
+    - No dedicated types on app -> infra layer. Method signatures seemed enough so far.
 
 ### Setup
 
